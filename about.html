@@ -1,0 +1,254 @@
+<!-- START PART 1 OF 4 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About OSC | O'Sullivan Communications</title>
+<link rel="icon" href="assets/favicon.svg" sizes="any">
+<meta name="description" content="Founded in 1973, O'Sullivan Communications (OSC) is a Maryknoll Group company delivering single-source multilingual publishing and inflight menu programs.">
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; overflow-x: clip; }
+  body { margin: 0; overflow-x: clip; overscroll-behavior-y: none; }
+  img { max-width: 100%; }
+  ::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; }
+  main > div > :first-child { margin-top: 0 !important; }
+  #mobile-menu { transition: opacity .2s ease, transform .2s ease; }
+  #mobile-menu[data-open="false"] { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu[data-open="true"] { opacity: 1; transform: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #094cb2; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
+    <a class="flex items-center gap-3 group min-w-0" href="index.html" aria-label="O'Sullivan Communications – Home">
+      <img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" class="osc-logo w-auto shrink-0">
+    </a>
+    <nav class="osc-nav hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main">
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="solutions.html">Solutions</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="platform.html">Our Platform</a>
+      <a aria-current="page" class="text-sm text-primary font-semibold transition-colors" href="about.html">About OSC</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <a class="osc-utility-btn hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-surface-container-lowest text-on-surface text-sm font-medium hover:bg-surface-container transition-colors" href="#" rel="nofollow">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Client Access
+      </a>
+      <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container transition-colors" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg id="menu-icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" data-open="false" class="lg:hidden absolute left-0 right-0 top-full bg-surface-container-lowest shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto" aria-hidden="true">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1" aria-label="Mobile">
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="solutions.html">Solutions</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="platform.html">Our Platform</a>
+      <a aria-current="page" class="flex items-center justify-between px-4 py-3 rounded-lg text-base bg-surface-container text-primary font-semibold transition-colors" href="about.html">About OSC</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="contact.html">Contact</a>
+      <a class="osc-utility-btn mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-surface-container-lowest text-on-surface text-sm font-semibold hover:bg-surface-container transition-colors" href="#" rel="nofollow">Client Access</a>
+    </nav>
+  </div>
+</header>
+<main class="w-full pt-16 sm:pt-20 bg-surface flex-1">
+  <div class="flex flex-col w-full">
+<!-- START ABOUT REFINED PART 1 OF 2 -->
+    <section class="osc-section w-full bg-surface-container-low" style="padding-top: 3rem; padding-bottom: 3rem;">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 gap-10 lg:gap-14 items-center" style="grid-template-columns: minmax(0, 1.55fr) minmax(280px, 1fr);">
+          <div>
+            <span class="osc-kicker mb-3">CORPORATE OVERVIEW &amp; HERITAGE</span>
+            <h1 class="osc-h1 mb-4">O'Sullivan Communications (OSC)</h1>
+            <p class="text-lg font-medium text-on-surface leading-relaxed mb-4">Award-Winning Operational Excellence in Multilingual Publishing and Inflight Programs</p>
+            <p class="text-base text-on-surface-variant leading-relaxed" style="margin-bottom: 0;">Founded in 1973 as a specialized design firm delivering editorial services, translation, and typography for the hospitality and travel industries, <strong class="font-semibold text-on-surface">O'Sullivan Communications (OSC)</strong> pioneered a true <em class="italic font-medium text-on-surface">One World, One Stop</em> production model built on departure-critical precision and dedicated client partnership. Today, OSC designs, manages, translates, prints, and ships more than 65 million inflight menus annually for premier international airlines, while supporting Fortune 500 leaders across consumer products, electronics, pharmaceuticals, and health and beauty.</p>
+          </div>
+          <div>
+            <div class="rounded-2xl shadow-lg" style="padding: 1.5rem 1.75rem; background: #ffffff; border-left: 4px solid #094cb2;">
+              <span class="osc-kicker mb-1.5">CORPORATE STEWARDSHIP &amp; SUPPLIER DIVERSITY</span>
+              <h2 class="font-headline text-lg font-semibold text-on-surface mb-2">A Maryknoll Group Company · Est. 1973</h2>
+              <p class="text-sm text-on-surface-variant leading-relaxed" style="margin-bottom: 0;">Provides enterprise airlines and Fortune 500 procurement teams with long-term financial stability and qualified <strong class="font-semibold text-on-surface">woman-owned business enterprise (WBE)</strong> supplier diversity participation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="osc-section w-full bg-surface" style="padding-top: 2.75rem; padding-bottom: 2.75rem;">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="mb-6">
+          <span class="osc-kicker mb-2">SINGLE-SOURCE ACCOUNTABILITY</span>
+          <h2 class="osc-h2 mb-3">An Award-Winning Legacy of Single-Source Accountability</h2>
+          <p class="text-base text-on-surface-variant leading-relaxed">Rather than outsourcing production stages across fragmented vendors, <strong class="font-semibold text-on-surface">O'Sullivan Communications (OSC)</strong> unites every step of complex publishing and print logistics under one roof—eliminating version drift, protecting brand consistency, and securing dependable on-time delivery.</p>
+        </div>
+        <div class="grid grid-cols-1 osc-tri gap-6 pb-10 mb-10" style="border-bottom: 1px solid rgba(195,198,214,0.35);">
+          <div class="rounded-xl bg-surface-container-low" style="padding: 1.5rem;">
+            <h3 class="font-headline text-lg font-semibold mb-2 flex items-center gap-2"><svg class="w-4 h-4 shrink-0 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><a class="text-primary hover:underline" href="solutions.html#enterprise-translation">Creative &amp; Linguistic Precision</a></h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Dedicated account management, native culinary and technical linguists, editorial proofreaders, and in-house desktop publishing specialists across 75+ language variants.</p>
+          </div>
+          <div class="rounded-xl bg-surface-container-low" style="padding: 1.5rem;">
+            <h3 class="font-headline text-lg font-semibold mb-2 flex items-center gap-2"><svg class="w-4 h-4 shrink-0 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><a class="text-primary hover:underline" href="platform.html">Proprietary EMMIS Automation</a></h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Centralized Translation Memory governance, structured XML content composition, and automated flight-schedule forecasting built on OSC's proprietary <strong class="font-semibold text-on-surface">EMMIS</strong> technology.</p>
+          </div>
+          <div class="rounded-xl bg-surface-container-low" style="padding: 1.5rem;">
+            <h3 class="font-headline text-lg font-semibold mb-2 flex items-center gap-2"><svg class="w-4 h-4 shrink-0 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg><a class="text-primary hover:underline" href="solutions.html#inflight-menu-management">Global Print &amp; Fulfillment</a></h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">High-resolution prepress engineering, commercial print manufacturing, and direct global distribution from coordinated U.S. and U.K. operations.</p>
+          </div>
+        </div>
+<!-- END ABOUT REFINED PART 1 OF 2 -->
+ <!-- START ABOUT REFINED PART 2 OF 2 -->
+        <div class="mb-6">
+          <span class="osc-kicker mb-2">DUAL-CONTINENT INFRASTRUCTURE</span>
+          <h2 class="osc-h2 mb-3">Transatlantic Footprint: United States and United Kingdom Operations</h2>
+          <p class="text-base text-on-surface-variant leading-relaxed">Operating established teams in Glen Rock, New Jersey and Slough, Berkshire (United Kingdom), OSC delivers synchronized North American and European production, logistics oversight, and client service across global airline networks and international markets.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <div class="rounded-2xl bg-surface-container-low flex items-start gap-4 h-full" style="padding: 1.75rem; border: 1px solid rgba(195,198,214,0.35);">
+            <span class="rounded-lg flex items-center justify-center shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div>
+              <h3 class="font-headline text-xl font-semibold text-on-surface mb-2">United States Operations (Technology &amp; Manufacturing)</h3>
+              <p class="text-sm font-medium text-on-surface leading-snug mb-3">P.O. Box 1116, Glen Rock, NJ 07452<br>Tel: <a class="text-primary font-semibold hover:underline" href="tel:9732275112">973-227-5112</a></p>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Serves as the central technology hub for the proprietary EMMIS ecosystem, centralized Translation Memory (TM) governance, and North American print fulfillment.</p>
+            </div>
+          </div>
+          <div class="rounded-2xl bg-surface-container-low flex items-start gap-4 h-full" style="padding: 1.75rem; border: 1px solid rgba(195,198,214,0.35);">
+            <span class="rounded-lg flex items-center justify-center shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <div>
+              <h3 class="font-headline text-xl font-semibold text-on-surface mb-2">United Kingdom Operations (European Logistics)</h3>
+              <p class="text-sm font-medium text-on-surface leading-snug mb-3">Unit 3, Hurricane Way, Apex Park, Slough, SL3 8AG<br>Tel: <a class="text-primary font-semibold hover:underline" href="tel:+441753942467">+44 01753 942467</a></p>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Situated minutes from London Heathrow (LHR) to provide direct bonded fulfillment and rapid customs clearance for European catering stations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="osc-section w-full bg-surface-container-low" style="padding-top: 2.75rem; padding-bottom: 2.75rem;">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="rounded-2xl mb-6" style="padding: 1.75rem 2rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+          <span class="osc-kicker mb-2">CLIENT PEDIGREE</span>
+          <h2 class="osc-h2 mb-3">Trusted by the World's Leading Airlines and Global Brands</h2>
+          <p class="text-base text-on-surface-variant leading-relaxed mb-5">O'Sullivan Communications manages departure-critical culinary menu programs and passenger collateral for premier international carriers, alongside multilingual technical and commercial publishing for Fortune 500 leaders across consumer goods, electronics, pharmaceuticals, and industrial manufacturing.</p>
+          <div class="flex flex-wrap justify-center gap-3 pt-1">
+            <span class="px-5 py-2.5 rounded-lg bg-surface-container-low text-sm font-medium text-on-surface">Air Canada</span>
+            <span class="px-5 py-2.5 rounded-lg bg-surface-container-low text-sm font-medium text-on-surface">United Airlines</span>
+            <span class="px-5 py-2.5 rounded-lg bg-surface-container-low text-sm font-medium text-on-surface">British Airways</span>
+            <span class="px-5 py-2.5 rounded-lg bg-surface-container-low text-sm font-medium text-on-surface">WestJet</span>
+            <span class="px-5 py-2.5 rounded-lg bg-surface-container-low text-sm font-medium text-on-surface">Virgin Atlantic</span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl flex flex-col sm:flex-row gap-6 items-center" style="padding: 1.5rem 2rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+          <a class="shrink-0" href="https://alcus.org" target="_blank" rel="noopener noreferrer"><img src="assets/alc-logo.png" alt="ALC — Association of Language Companies" width="1414" height="652" style="max-width: 110px; height: auto;"></a>
+          <div class="min-w-0">
+            <span class="osc-kicker mb-1">INDUSTRY GOVERNANCE</span>
+            <h2 class="font-headline text-lg font-semibold text-on-surface mb-1"><a class="text-primary hover:underline" href="https://alcus.org" target="_blank" rel="noopener noreferrer">ALC (Association of Language Companies)</a></h2>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Active member dedicated to upholding the highest professional standards, ethical guidelines, and quality benchmarks for language service companies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END ABOUT REFINED PART 2 OF 2 -->
+
+
+    <section class="osc-section osc-on-dark w-full bg-on-surface text-surface relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center relative z-10">
+        <span class="osc-kicker mb-4">OPERATIONAL LEADERSHIP &amp; ACCOUNT TEAMS</span>
+        <h2 class="osc-h2 mb-4">Connect With Our U.S. and U.K. Operations Teams</h2>
+        <p class="text-base text-surface/80 leading-relaxed mb-8 max-w-2xl">Speak directly with our transatlantic account directors to discuss program capabilities, supplier diversity credentials, or seasonal transition planning.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-surface-container-lowest text-on-surface font-semibold text-sm hover:bg-surface-dim transition-all shadow-xl group" href="contact.html">Connect With Our Team
+          </a>
+          <a class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded bg-surface/10 text-surface font-semibold text-sm transition-colors" href="tel:9732275112">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call U.S. Operations: 973-227-5112
+          </a>
+        </div>
+      </div>
+    </section>
+<!-- END PART 3 OF 4 -->
+<!-- START PART 4 OF 4 -->
+  </div>
+</main>
+
+
+<footer class="w-full bg-surface-container-low text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12" style="padding-top: 3rem; padding-bottom: 2.5rem;">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+      <div class="lg:col-span-4 space-y-3">
+        <a class="inline-flex items-center" href="index.html" aria-label="O'Sullivan Communications Home"><img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" style="height: 36px; width: auto;"></a>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Single-source enterprise translation, inflight menu programs, and commercial publishing—from concept to completion.</p>
+        <p class="text-xs text-on-surface-variant">Active Member: <a class="font-semibold text-primary hover:underline" href="https://alcus.org" target="_blank" rel="noopener noreferrer">ALC — Association of Language Companies</a></p>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Navigation</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-primary transition-colors" href="solutions.html">Solutions</a></li>
+          <li><a class="hover:text-primary transition-colors" href="platform.html">Our Platform</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">About OSC</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Transatlantic Operations</span>
+        <div class="text-sm space-y-2.5 leading-snug">
+          <p><strong class="text-on-surface">USA:</strong> P.O. Box 1116, Glen Rock, NJ 07452<br><a class="text-primary font-medium hover:underline" href="tel:9732275112">973-227-5112</a></p>
+          <p><strong class="text-on-surface">UK:</strong> Unit 3, Hurricane Way, Apex Park, Slough, SL3 8AG<br><a class="text-primary font-medium hover:underline" href="tel:+441753942467">+44 01753 942467</a></p>
+          <p><a class="text-primary font-medium hover:underline" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a></p>
+        </div>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Governance &amp; Access</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Client Access</a></li>
+          <li><a class="hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-primary transition-colors" href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+      <p style="margin: 0;">© 2026 O'Sullivan Communications. All rights reserved.</p>
+      <p style="margin: 0;"><strong class="font-medium text-on-surface">A Maryknoll Group Company</strong> · Established 1973 · Certified WBE</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script>
+(function () {
+  var btn = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var iconOpen = document.getElementById('menu-icon-open');
+  var iconClose = document.getElementById('menu-icon-close');
+  if (!btn || !menu) return;
+  function setOpen(open) {
+    menu.setAttribute('data-open', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (iconOpen) iconOpen.classList.toggle('hidden', open);
+    if (iconClose) iconClose.classList.toggle('hidden', !open);
+  }
+  btn.addEventListener('click', function () { setOpen(menu.getAttribute('data-open') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('#site-header')) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setOpen(false); });
+})();
+</script>
+</body>
+</html>
+<!-- END PART 4 OF 4 -->
+
+
+

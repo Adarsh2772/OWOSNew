@@ -1,0 +1,321 @@
+<!-- START PART 1 OF 4 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solutions | Single-Source Inflight Menus, Translation &amp; Publishing | O'Sullivan Communications (OSC)</title>
+<link rel="icon" href="assets/favicon.svg" sizes="any">
+<meta name="description" content="Single-source inflight menu programs, enterprise technical translation, and dual-continent commercial publishing from O'Sullivan Communications (OSC).">
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; overflow-x: clip; }
+  body { margin: 0; overflow-x: clip; overscroll-behavior-y: none; }
+  img { max-width: 100%; }
+  ::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; }
+  main > div > :first-child { margin-top: 0 !important; }
+  #mobile-menu { transition: opacity .2s ease, transform .2s ease; }
+  #mobile-menu[data-open="false"] { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu[data-open="true"] { opacity: 1; transform: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #094cb2; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
+    <a class="flex items-center gap-3 group min-w-0" href="index.html" aria-label="O'Sullivan Communications – Home">
+      <img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" class="osc-logo w-auto shrink-0">
+    </a>
+    <nav class="osc-nav hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main">
+      <a aria-current="page" class="text-sm text-primary font-semibold transition-colors" href="solutions.html">Solutions</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="platform.html">Our Platform</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About OSC</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <a class="osc-utility-btn hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-surface-container-lowest text-on-surface text-sm font-medium hover:bg-surface-container transition-colors" href="#" rel="nofollow">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Client Access
+      </a>
+      <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container transition-colors" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg id="menu-icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" data-open="false" class="lg:hidden absolute left-0 right-0 top-full bg-surface-container-lowest shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto" aria-hidden="true">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1" aria-label="Mobile">
+      <a aria-current="page" class="flex items-center justify-between px-4 py-3 rounded-lg text-base bg-surface-container text-primary font-semibold transition-colors" href="solutions.html">Solutions</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="platform.html">Our Platform</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="about.html">About OSC</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="contact.html">Contact</a>
+      <a class="osc-utility-btn mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-surface-container-lowest text-on-surface text-sm font-semibold hover:bg-surface-container transition-colors" href="#" rel="nofollow">Client Access</a>
+    </nav>
+  </div>
+</header>
+<main class="w-full pt-16 sm:pt-20 bg-surface flex-1">
+  <div class="flex flex-col w-full">
+<!-- START SOLUTIONS PART 1 OF 3 -->
+    <section class="osc-section w-full bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="mb-10">
+          <span class="osc-kicker mb-3">ENTERPRISE SOLUTIONS · SINGLE-SOURCE ACCOUNTABILITY</span>
+          <h1 class="osc-h1 mb-4">Single-Source Inflight Menu Programs, Enterprise Translation, and Commercial Publishing</h1>
+          <p class="text-base text-on-surface-variant leading-relaxed" style="margin-bottom: 2rem;">Coordinating multilingual translation, graphic design, and commercial print manufacturing across disconnected vendors introduces compounding delays, version drift, and administrative overhead. <strong class="font-semibold text-on-surface">O'Sullivan Communications (OSC)</strong> eliminates vendor friction under one roof with global operational stability. Operating from coordinated facilities in the United States and the United Kingdom, OSC provides complete turnkey program management or flexible <em>à la carte</em> support across three core disciplines: inflight dining collateral, complex technical manual localization, and dual-continent print production.</p>
+          <div class="flex flex-wrap items-center gap-4">
+            <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-primary text-on-primary font-medium text-sm hover:bg-primary-container transition-all shadow-md" href="contact.html">Request a Consultation</a>
+            <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-surface-container-lowest text-on-surface font-medium text-sm hover:bg-surface-container-high transition-colors shadow-sm" href="platform.html">Explore the EMMIS Platform</a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 osc-tri gap-6 items-stretch">
+          <div class="rounded-2xl flex flex-col justify-between h-full" style="padding: 1.75rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <div>
+              <span class="rounded-lg flex items-center justify-center mb-4 shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span>
+              <h2 class="font-headline text-xl font-semibold mb-2"><a class="text-primary hover:underline" href="#inflight-menu-management">Inflight Menu Management &amp; Crew Documentation</a></h2>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Turnkey lifecycle management—or flexible <em>à la carte</em> logistics and production—for printed cabin menus, wine guides, crew galley guides, and synchronized seatback IFE feeds.</p>
+              <ul class="space-y-2 text-xs text-on-surface-variant">
+                <li>• Printed cabin menus, wine lists &amp; beverage cards</li>
+                <li>• Galley crew guides &amp; EMMIS ChefChats plating sheets</li>
+                <li>• Electronic seatback IFE &amp; digital menu feeds</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rounded-2xl flex flex-col justify-between h-full" style="padding: 1.75rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <div>
+              <span class="rounded-lg flex items-center justify-center mb-4 shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
+              <h2 class="font-headline text-xl font-semibold mb-2"><a class="text-primary hover:underline" href="#enterprise-translation">Enterprise Translation &amp; Technical Manuals</a></h2>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Specialized localization for multi-chapter technical manuals, regulatory filings, and corporate collateral across 75+ language variants and regional dialects.</p>
+              <ul class="space-y-2 text-xs text-on-surface-variant">
+                <li>• Large technical, industrial &amp; regulatory manuals</li>
+                <li>• Centralized Translation Memory &amp; terminology glossaries</li>
+                <li>• Native editorial proofing &amp; multilingual typesetting</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rounded-2xl flex flex-col justify-between h-full" style="padding: 1.75rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <div>
+              <span class="rounded-lg flex items-center justify-center mb-4 shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span>
+              <h2 class="font-headline text-xl font-semibold mb-2"><a class="text-primary hover:underline" href="#commercial-publishing">Commercial Publishing &amp; Prepress Production</a></h2>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-4">In-house creative design, multilingual desktop publishing, and coordinated commercial print fulfillment across U.S. and U.K. production facilities.</p>
+              <ul class="space-y-2 text-xs text-on-surface-variant">
+                <li>• Creative design &amp; brand adaptation ("Your Design, or Ours")</li>
+                <li>• Multilingual desktop publishing (DTP)</li>
+                <li>• Dual-continent prepress, print &amp; global distribution</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END SOLUTIONS PART 1 OF 3 -->
+ <!-- START SOLUTIONS PART 2 OF 3 -->
+    <section id="inflight-menu-management" class="osc-section w-full bg-surface">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <div class="lg:col-span-5">
+            <span class="rounded-lg flex items-center justify-center mb-3 shrink-0" style="width: 36px; height: 36px; background: #e8eaef; color: #434752;"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span>
+            <span class="osc-kicker mb-2">INFLIGHT MENU MANAGEMENT</span>
+            <h2 class="osc-h2 mb-4">End-to-End Inflight Menu Programs for Global Airlines</h2>
+            <p class="text-base text-on-surface-variant leading-relaxed mb-6">Commercial airlines balance complex seasonal rotations, multi-cabin service tiers, and strict international departure schedules. Operating with over 50 years of aviation dining expertise, OSC manages every stage of cabin menu print and digital publication—or integrates at any operational point you require.</p>
+            <div class="rounded-2xl bg-surface-container-low" style="padding: 1.5rem; border-left: 4px solid #094cb2;">
+              <span class="osc-kicker mb-1">TECHNOLOGY INTEGRATION</span>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-3">Built on OSC's proprietary <strong class="font-semibold text-on-surface">EMMIS</strong> technology to automate flight schedule ingestion, print volume forecasting, galley plating instructions, and cloud proofing.</p>
+              <a class="text-sm font-semibold text-primary hover:underline" href="platform.html">The EMMIS Publishing &amp; Logistics Platform</a>
+            </div>
+          </div>
+          <div class="lg:col-span-7 flex flex-col gap-4" style="border-left: 2px solid rgba(9, 76, 178, 0.22); padding-left: 1.25rem;">
+            <div class="p-6 rounded-xl bg-surface-container-low">
+              <h3 class="font-headline text-base font-semibold text-on-surface mb-1">Printed Cabin Menus &amp; Airline Wine Guides</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">High-craft menu books, sommelier wine lists, and beverage cards for First, Business, and Premium Economy cabins—produced to exact airline brand standards, paper stock specifications, and finishing requirements.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-surface-container-low">
+              <h3 class="font-headline text-base font-semibold text-on-surface mb-1">Cabin Crew &amp; Galley Documentation (<a class="text-primary hover:underline" href="emmis-chefchats.html">EMMIS ChefChats</a> &amp; Reference Sheets)</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Managed through our <a class="text-primary hover:underline font-medium" href="emmis-chefchats.html">EMMIS ChefChats</a> platform, OSC delivers inflight and print crew packets featuring high-resolution plating photographs, assembly diagrams, galley oven dwell times, wine-pairing notes, allergen matrices, and verified caterer sign-off workflows.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-surface-container-low">
+              <h3 class="font-headline text-base font-semibold text-on-surface mb-1">Electronic Seatback &amp; Passenger Digital Feeds</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Structured digital outputs derived from the same approved menu data source—ensuring printed menus, <a class="text-primary hover:underline font-medium" href="emmis-menuviewer.html">EMMIS MenuViewer</a> cloud portals, seatback IFE menus, and digital passenger touchpoints match down to every ingredient.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-surface-container-low">
+              <h3 class="font-headline text-base font-semibold text-on-surface mb-1">Integrated Culinary Localization</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Dedicated culinary linguists translate intricate dish descriptions, wine notes, and regulatory allergen disclosures directly within the production cycle, supported by centralized multilingual terminology.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-surface-container-low">
+              <h3 class="font-headline text-base font-semibold text-on-surface mb-1">Global Print Fulfillment &amp; Station Distribution</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Automated carton and build assembly powered by <a class="text-primary hover:underline font-medium" href="emmis-order-maintenance.html">EMMIS Order Maintenance</a> across coordinated U.S. and U.K. manufacturing hubs, shipping directly to global catering kitchens, flight commissaries, and airline hubs with customs-ready documentation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END SOLUTIONS PART 2 OF 3 -->
+ <!-- START SOLUTIONS PART 3 OF 3 -->
+    <section id="enterprise-translation" class="osc-section w-full bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div class="lg:col-span-5">
+            <span class="rounded-lg flex items-center justify-center mb-3 shrink-0" style="width: 36px; height: 36px; background: #ffffff; color: #434752; border: 1px solid rgba(195,198,214,0.4);"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
+            <span class="osc-kicker mb-3">GLOBAL LOCALIZATION &amp; TECHNICAL DOCUMENTATION</span>
+            <h2 class="osc-h2 mb-4">Enterprise Translation, Technical Manuals, and Multilingual Publishing</h2>
+            <p class="text-base text-on-surface-variant leading-relaxed mb-6">Global enterprises in consumer goods, electronics, medical devices, pharmaceuticals, and regulated industrial sectors rely on OSC when complex technical accuracy must translate cleanly into print-ready files and digital outputs. By integrating linguistic translation, editorial proofing, and desktop typesetting under one roof, OSC eliminates version drift across every international market.</p>
+            <div class="rounded-xl" style="padding: 1.5rem; background: #ffffff; border-left: 4px solid #094cb2; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface mb-1">Enterprise Content &amp; Terminology</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed mb-3">Centralized modular content authoring and translation memory tools ensure consistency across multi-market product launches.</p>
+              <a class="text-xs font-semibold text-primary hover:underline" href="emmis-cms.html">EMMIS CMS Content Management</a>
+            </div>
+          </div>
+          <div class="lg:col-span-7 flex flex-col gap-4" style="border-left: 2px solid rgba(9, 76, 178, 0.22); padding-left: 1.25rem;">
+            <div class="rounded-xl" style="padding: 1.5rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35);">
+              <h3 class="font-headline text-lg font-semibold text-on-surface mb-1.5">Large Technical, Industrial &amp; User Manuals</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Comprehensive localization management for large, multi-chapter technical manuals, equipment assembly guides, product specifications, and regulatory compliance filings. Experienced desktop publishing specialists handle complex layouts in Adobe InDesign, FrameMaker, Illustrator, and Microsoft Office—converting right-to-left scripts, double-byte Asian character sets, and dense technical tables with precision.</p>
+            </div>
+            <div class="rounded-xl" style="padding: 1.5rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35);">
+              <h3 class="font-headline text-lg font-semibold text-on-surface mb-1.5">Translation Memory &amp; Proprietary Language Glossaries</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Centralized translation memory platforms paired with dedicated, client-specific terminology glossaries lock in approved brand phrasing, technical nomenclature, and regulatory disclosures—reducing repeat localization costs and accelerating future product revisions.</p>
+            </div>
+            <div class="rounded-xl" style="padding: 1.5rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35);">
+              <h3 class="font-headline text-lg font-semibold text-on-surface mb-1.5">Native Editorial Proofreading, Copyediting &amp; Composition</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Dedicated native-speaking linguists and subject-matter editors review all content for cultural appropriateness, grammatical accuracy, and technical precision, followed by meticulous composition proofreading for final layout and print readiness.</p>
+            </div>
+            <div class="rounded-xl" style="padding: 1.5rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35);">
+              <h3 class="font-headline text-lg font-semibold text-on-surface mb-1.5">75+ Language Variants &amp; Regional Dialects</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Full localization coverage across European, Middle Eastern, Asian, and American markets—including regional adaptations such as Canadian French and Latin American Spanish.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="commercial-publishing" class="osc-section w-full bg-surface">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div class="lg:col-span-5">
+            <span class="rounded-lg flex items-center justify-center mb-3 shrink-0" style="width: 36px; height: 36px; background: #e8eaef; color: #434752;"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span>
+            <span class="osc-kicker mb-3">DESIGN, TYPESETTING &amp; DUAL-CONTINENT PRINT</span>
+            <h2 class="osc-h2 mb-4">Commercial Publishing, Creative Design, and Dual-Continent Production</h2>
+            <p class="text-base text-on-surface-variant leading-relaxed mb-6">By uniting creative design, multilingual desktop publishing, prepress engineering, and commercial printing under one single point of control, OSC empowers global marketing and brand leaders with end-to-end control from initial concept to physical delivery.</p>
+            <div class="rounded-xl bg-surface-container-low" style="padding: 1.5rem; border-left: 4px solid #094cb2;">
+              <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface mb-1">Operational Scale</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed mb-3">Integrated manufacturing and distribution workflows are supported by dedicated production teams across our <a class="font-semibold text-primary hover:underline" href="about.html">United States and United Kingdom operations</a>.</p>
+            </div>
+          </div>
+          <div class="lg:col-span-7 flex flex-col gap-4" style="border-left: 2px solid rgba(9, 76, 178, 0.22); padding-left: 1.25rem;">
+            <div class="rounded-xl bg-surface-container-low" style="padding: 1.5rem;">
+              <h3 class="font-headline text-lg font-semibold text-on-surface mb-1.5">Creative Design &amp; Brand Adaptation ("Your Design, or Ours")</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">OSC provides flexible engagement models: our in-house creative design team can develop original layouts and templates from the ground up, or seamlessly adapt your existing brand guidelines, master templates, and corporate identity across international formats and languages.</p>
+            </div>
+            <div class="rounded-xl bg-surface-container-low" style="padding: 1.5rem;">
+              <h3 class="font-headline text-lg font-semibold text-on-surface mb-1.5">Multilingual Desktop Publishing (DTP)</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Experienced desktop publishing specialists partner directly with linguists to prepare print-ready files, manage right-to-left and double-byte typography, adjust for language text expansion, and provide rapid digital approval proofs.</p>
+            </div>
+            <div class="rounded-xl bg-surface-container-low" style="padding: 1.5rem;">
+              <h3 class="font-headline text-lg font-semibold text-on-surface mb-1.5">Dual-Continent Prepress, Print &amp; Fulfillment</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Comprehensive manufacturing across our United States and United Kingdom operations—combining high-resolution prepress engineering, electronic proofs, responsive on-demand printing, specialized die-cutting and binding, and global distribution via air, sea, and ground freight to deliver printed products where and when they are needed.</p>
+            </div>
+            <div class="rounded-xl bg-surface-container-low" style="padding: 1.5rem;">
+              <h3 class="font-headline text-lg font-semibold text-on-surface mb-1.5">Single-Point Account Management</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Dedicated project managers coordinate schedules, editorial approvals, and fulfillment logistics from initial kickoff to final delivery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END SOLUTIONS PART 3 OF 3 -->
+
+    <section class="osc-section osc-on-dark w-full bg-on-surface text-surface relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center relative z-10">
+        <span class="osc-kicker mb-4">PROJECT PLANNING &amp; LOGISTICS</span>
+        <h2 class="osc-h2 mb-4">Evaluate Your Program Requirements with Our Operations Specialists</h2>
+        <p class="text-base text-surface/80 leading-relaxed mb-8 max-w-2xl">Consult with our transatlantic project directors to review your production schedules, language matrices, or custom workflow integration.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-surface-container-lowest text-on-surface font-semibold text-sm hover:bg-surface-dim transition-all shadow-xl group" href="contact.html">Request a Project Consultation
+          </a>
+          <a class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded bg-surface/10 text-surface font-semibold text-sm transition-colors" href="tel:9732275112">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call U.S. Operations: 973-227-5112
+          </a>
+        </div>
+      </div>
+    </section>
+<!-- END PART 5 OF 6 -->
+<!-- START PART 6 OF 6 -->
+  </div>
+</main>
+
+<footer class="w-full bg-surface-container-low text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12" style="padding-top: 3rem; padding-bottom: 2.5rem;">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+      <div class="lg:col-span-4 space-y-3">
+        <a class="inline-flex items-center" href="index.html" aria-label="O'Sullivan Communications Home"><img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" style="height: 36px; width: auto;"></a>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Single-source enterprise translation, inflight menu programs, and commercial publishing—from concept to completion.</p>
+        <p class="text-xs text-on-surface-variant">Active Member: <a class="font-semibold text-primary hover:underline" href="https://alcus.org" target="_blank" rel="noopener noreferrer">ALC — Association of Language Companies</a></p>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Navigation</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-primary transition-colors" href="solutions.html">Solutions</a></li>
+          <li><a class="hover:text-primary transition-colors" href="platform.html">Our Platform</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">About OSC</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Transatlantic Operations</span>
+        <div class="text-sm space-y-2.5 leading-snug">
+          <p><strong class="text-on-surface">USA:</strong> P.O. Box 1116, Glen Rock, NJ 07452<br><a class="text-primary font-medium hover:underline" href="tel:9732275112">973-227-5112</a></p>
+          <p><strong class="text-on-surface">UK:</strong> Unit 3, Hurricane Way, Apex Park, Slough, SL3 8AG<br><a class="text-primary font-medium hover:underline" href="tel:+441753942467">+44 01753 942467</a></p>
+          <p><a class="text-primary font-medium hover:underline" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a></p>
+        </div>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Governance &amp; Access</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Client Access</a></li>
+          <li><a class="hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-primary transition-colors" href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+      <p style="margin: 0;">© 2026 O'Sullivan Communications. All rights reserved.</p>
+      <p style="margin: 0;"><strong class="font-medium text-on-surface">A Maryknoll Group Company</strong> · Established 1973 · Certified WBE</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function () {
+  var btn = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var iconOpen = document.getElementById('menu-icon-open');
+  var iconClose = document.getElementById('menu-icon-close');
+  if (!btn || !menu) return;
+  function setOpen(open) {
+    menu.setAttribute('data-open', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (iconOpen) iconOpen.classList.toggle('hidden', open);
+    if (iconClose) iconClose.classList.toggle('hidden', !open);
+  }
+  btn.addEventListener('click', function () { setOpen(menu.getAttribute('data-open') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('#site-header')) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setOpen(false); });
+})();
+</script>
+</body>
+</html>
+<!-- END PART 6 OF 6 -->
+
+
+
+

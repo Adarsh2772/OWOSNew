@@ -1,0 +1,414 @@
+<!-- START PART 1 OF 5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | O'Sullivan Communications (OSC)</title>
+<link rel="icon" href="assets/favicon.svg" sizes="any">
+<meta name="description" content="Contact O'Sullivan Communications (OSC) U.S. and U.K. operations: 973-227-5112 (U.S.) and +44 01753 942467 (U.K.).">
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; overflow-x: clip; }
+  body { margin: 0; overflow-x: clip; overscroll-behavior-y: none; }
+  img { max-width: 100%; }
+  ::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; }
+  main > div > :first-child { margin-top: 0 !important; }
+  #mobile-menu { transition: opacity .2s ease, transform .2s ease; }
+  #mobile-menu[data-open="false"] { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu[data-open="true"] { opacity: 1; transform: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #094cb2; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+  .osc-captcha { width: 100%; max-width: 304px; }
+  .osc-captcha-box { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 76px; padding: 0 10px 0 12px; background: #f9f9f9; border: 1px solid #d3d3d3; border-radius: 3px; box-shadow: 0 0 4px 1px rgba(0,0,0,.08); font-family: Roboto, Inter, system-ui, sans-serif; }
+  .osc-captcha-check { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 8px 0; background: none; border: 0; cursor: pointer; text-align: left; color: #000; }
+  .osc-captcha-check:focus-visible { outline: none; }
+  .osc-captcha-check:focus-visible .osc-captcha-tick { box-shadow: 0 0 0 2px #fff, 0 0 0 4px #094cb2; }
+  .osc-captcha-tick { position: relative; flex-shrink: 0; width: 28px; height: 28px; background: #fff; border: 2px solid #c1c1c1; border-radius: 2px; transition: border-color .15s ease; }
+  .osc-captcha-check:hover .osc-captcha-tick { border-color: #b2b2b2; }
+  .osc-captcha-label { font-size: 14px; line-height: 1.3; }
+  .osc-captcha-spinner, .osc-captcha-mark { position: absolute; inset: 0; margin: auto; opacity: 0; }
+  .osc-captcha-spinner { width: 24px; height: 24px; border: 3px solid #4a90e2; border-right-color: transparent; border-radius: 50%; }
+  .osc-captcha-mark { width: 30px; height: 30px; inset: -4px 0 0 -2px; }
+  .osc-captcha-mark path { fill: none; stroke: #009e55; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 40; }
+  .osc-captcha[data-state="loading"] .osc-captcha-tick, .osc-captcha[data-state="checked"] .osc-captcha-tick { border-color: transparent; background: transparent; }
+  .osc-captcha[data-state="loading"] .osc-captcha-spinner { opacity: 1; animation: osc-spin .8s linear infinite; }
+  .osc-captcha[data-state="checked"] .osc-captcha-mark { opacity: 1; }
+  .osc-captcha[data-state="checked"] .osc-captcha-mark path { animation: osc-draw .35s ease-out forwards; }
+  .osc-captcha[data-state="error"] .osc-captcha-box { border-color: #d93025; }
+  .osc-captcha-brand { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; color: #555; font-size: 10px; line-height: 1.2; text-align: center; }
+  .osc-captcha-brand small { font-size: 8px; color: #777; }
+  .osc-captcha-error { margin-top: 8px; font-size: 13px; font-weight: 500; color: #ba1a1a; }
+  @keyframes osc-spin { to { transform: rotate(360deg); } }
+  @keyframes osc-draw { to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { .osc-captcha[data-state="checked"] .osc-captcha-mark path { stroke-dashoffset: 0; } }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
+    <a class="flex items-center gap-3 group min-w-0" href="index.html" aria-label="O'Sullivan Communications – Home">
+      <img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" class="osc-logo w-auto shrink-0">
+    </a>
+    <nav class="osc-nav hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main">
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="solutions.html">Solutions</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="platform.html">Our Platform</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About OSC</a>
+      <a aria-current="page" class="text-sm text-primary font-semibold transition-colors" href="contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <a class="osc-utility-btn hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-surface-container-lowest text-on-surface text-sm font-medium hover:bg-surface-container transition-colors" href="#" rel="nofollow">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Client Access
+      </a>
+      <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container transition-colors" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg id="menu-icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" data-open="false" class="lg:hidden absolute left-0 right-0 top-full bg-surface-container-lowest shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto" aria-hidden="true">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1" aria-label="Mobile">
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="solutions.html">Solutions</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="platform.html">Our Platform</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="about.html">About OSC</a>
+      <a aria-current="page" class="flex items-center justify-between px-4 py-3 rounded-lg text-base bg-surface-container text-primary font-semibold transition-colors" href="contact.html">Contact</a>
+      <a class="osc-utility-btn mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-surface-container-lowest text-on-surface text-sm font-semibold hover:bg-surface-container transition-colors" href="#" rel="nofollow">Client Access</a>
+    </nav>
+  </div>
+</header>
+<main class="w-full pt-16 sm:pt-20 bg-surface flex-1">
+  <div class="flex flex-col w-full">
+<!-- END PART 1 OF 5 -->
+<!-- START PART 2 OF 5 -->
+        <section class="osc-section w-full bg-surface-container-low" style="padding-top: 3rem; padding-bottom: 3rem;">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <span class="osc-kicker mb-3">COMMERCIAL &amp; OPERATIONAL INQUIRIES</span>
+        <h1 class="osc-h1 mb-4">Connect With Our Project Management Teams</h1>
+        <p class="text-base text-on-surface-variant leading-relaxed" style="margin-bottom: 0;">Whether you are planning a <a class="text-primary font-medium hover:underline" href="solutions.html#inflight-menu-management">seasonal inflight menu rotation</a>, organizing <a class="text-primary font-medium hover:underline" href="solutions.html#enterprise-translation">technical documentation across multiple languages</a>, or scheduling an <a class="text-primary font-medium hover:underline" href="platform.html"><strong class="font-semibold text-primary">EMMIS</strong> platform</a> briefing, <strong class="font-semibold text-on-surface">O'Sullivan Communications (OSC)</strong> account teams in the United States and United Kingdom deliver unified support under our <em class="italic font-medium text-on-surface">One World, One Stop</em> model.</p>
+      </div>
+    </section>
+
+    <section class="osc-section w-full bg-surface" id="inquiry-form" style="padding-top: 3.5rem; padding-bottom: 4rem;">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-7">
+            <span class="osc-kicker mb-3">Enterprise Consultation Form</span>
+            <h2 class="osc-h2 mb-6">Submit Your Program Requirements</h2>
+            <div class="hidden mb-8 p-6 rounded-xl bg-surface-container-lowest shadow-xl transition-all duration-300" id="form-feedback-alert">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-on-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-base font-semibold text-on-surface">Inquiry Received</h4>
+                  <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Thank you. Our U.S. and U.K. account teams will review your program requirements and follow up with you.<span id="form-ref-line" hidden> A confirmation email is on its way. Your reference: <strong class="text-on-surface" id="form-ref"></strong></span></p>
+                </div>
+                <button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('form-feedback-alert').classList.add('hidden')" type="button" aria-label="Dismiss">✕</button>
+              </div>
+            </div>
+            <div class="mb-8 p-6 rounded-xl shadow-xl" id="form-error-alert" role="alert" hidden style="background:#ffdad6;">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style="background:#ba1a1a;color:#fff;font-weight:bold;">!</div>
+                <div class="flex-1">
+                  <h4 class="text-base font-semibold" style="color:#410002;">We couldn't send your inquiry</h4>
+                  <p class="text-sm mt-1 leading-relaxed" style="color:#410002;" id="form-error-text"></p>
+                </div>
+                <button style="color:#410002;" onclick="document.getElementById('form-error-alert').hidden = true" type="button" aria-label="Dismiss">✕</button>
+              </div>
+            </div>
+            <form class="bg-surface-container-lowest rounded-2xl p-5 sm:p-8 shadow-lg space-y-6" id="project-intake-form" onsubmit="handleFormSubmit(event)" data-endpoint="api/contact.php" novalidate>
+              <div style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+                <label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex flex-col space-y-2">
+                  <label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="full_name">Full Name <span class="text-error font-normal text-xs">* Required</span></label>
+                  <input class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="full_name" name="full_name" required type="text">
+                </div>
+                <div class="flex flex-col space-y-2">
+                  <label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="job_title">Professional Title <span class="text-outline text-xs lowercase font-normal">(optional)</span></label>
+                  <input class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="job_title" name="job_title" type="text">
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex flex-col space-y-2">
+                  <label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="company_name">Organization / Carrier <span class="text-error font-normal text-xs">* Required</span></label>
+                  <input class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="company_name" name="company_name" required type="text">
+                </div>
+                <div class="flex flex-col space-y-2">
+                  <label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="work_email">Business Email Address <span class="text-error font-normal text-xs">* Required</span></label>
+                  <input class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="work_email" name="work_email" required type="email">
+                </div>
+              </div>
+              <div class="flex flex-col space-y-2">
+                <label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="phone_number">Direct Phone Number <span class="text-outline text-xs lowercase font-normal">(optional)</span></label>
+                <input class="w-full px-4 py-3 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="phone_number" name="phone_number" type="tel">
+              </div>
+<!-- END PART 2 OF 5 -->
+<!-- START PART 3 OF 5 -->
+              <div class="flex flex-col space-y-3">
+                <span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1">Primary Service Area <span class="text-error font-normal text-xs">* Select at least one</span></span>
+                <div class="grid grid-cols-1 gap-3">
+                  <label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+                    <input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="capabilities" type="checkbox" value="Inflight Menu & Media Programs (Cabin Menus, ChefChats, IFE)">
+                    <span class="text-sm font-medium text-on-surface">Inflight Menu &amp; Media Programs (Cabin Menus, ChefChats, IFE)</span>
+                  </label>
+                  <label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+                    <input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="capabilities" type="checkbox" value="Enterprise Multilingual Translation & Technical Manuals">
+                    <span class="text-sm font-medium text-on-surface">Enterprise Multilingual Translation &amp; Technical Manuals</span>
+                  </label>
+                  <label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+                    <input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="capabilities" type="checkbox" value="Commercial Publishing, Prepress & Print Fulfillment">
+                    <span class="text-sm font-medium text-on-surface">Commercial Publishing, Prepress &amp; Print Fulfillment</span>
+                  </label>
+                  <label class="service-chip relative flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+                    <input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" name="capabilities" type="checkbox" value="EMMIS Platform Demonstration & Architecture Briefing">
+                    <span class="text-sm font-medium text-on-surface">EMMIS Platform Demonstration &amp; Architecture Briefing</span>
+                  </label>
+                </div>
+              </div>
+              <div class="flex flex-col space-y-2">
+                <label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex flex-wrap items-center justify-between gap-x-2 gap-y-1" for="project_details">Project Specifications &amp; Target Timeline <span class="text-error font-normal text-xs">* Required</span></label>
+                <textarea class="w-full p-4 rounded-lg bg-surface-container text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline leading-relaxed transition-all resize-y" id="project_details" name="project_details" required rows="5"></textarea>
+              </div>
+              <div class="osc-captcha" id="captcha-wrap" data-state="idle">
+                <div class="osc-captcha-box">
+                  <button class="osc-captcha-check" id="captcha-check" type="button" role="checkbox" aria-checked="false" aria-describedby="captcha-error">
+                    <span class="osc-captcha-tick" aria-hidden="true"><span class="osc-captcha-spinner"></span><svg class="osc-captcha-mark" viewBox="0 0 30 30"><path d="M6 16 l6 6 L25 8"/></svg></span>
+                    <span class="osc-captcha-label">I'm not a robot</span>
+                  </button>
+                  <span class="osc-captcha-brand" aria-hidden="true">
+                    <svg class="w-7 h-7 text-primary mb-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    Security check<small>Protected form</small>
+                  </span>
+                </div>
+                <p class="osc-captcha-error" id="captcha-error" role="alert" hidden>Please confirm you are not a robot.</p>
+              </div>
+              <button class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-primary text-on-primary font-semibold text-sm hover:bg-primary-container shadow-md transition-all active:scale-[0.98]" id="submit-btn" type="submit">
+                <span>Submit Program Inquiry</span>
+              </button>
+            </form>
+          </div>
+          <div class="lg:col-span-5 flex flex-col gap-6">
+            <div>
+              <span class="osc-kicker mb-2">DIRECT TRANSATLANTIC OPERATIONS</span>
+              <h2 class="osc-h2">U.S. and U.K. Offices</h2>
+            </div>
+
+            <div class="rounded-2xl bg-surface-container-low flex items-start gap-4" style="padding: 1.75rem; border: 1px solid rgba(195,198,214,0.35);">
+              <span class="rounded-lg flex items-center justify-center shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div>
+                <h3 class="font-headline text-xl font-semibold text-on-surface mb-2">United States Operations (Headquarters)</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed mb-3"><strong class="text-on-surface">O'Sullivan Communications (OSC)</strong><br>P.O. Box 1116<br>Glen Rock, NJ 07452</p>
+                <p class="text-sm text-on-surface leading-relaxed">Telephone: <a class="text-primary font-semibold hover:underline" href="tel:9732275112">973-227-5112</a><br>Email: <a class="text-primary font-semibold hover:underline" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a></p>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-surface-container-low flex items-start gap-4" style="padding: 1.75rem; border: 1px solid rgba(195,198,214,0.35);">
+              <span class="rounded-lg flex items-center justify-center shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+              <div>
+                <h3 class="font-headline text-xl font-semibold text-on-surface mb-2">United Kingdom Operations (European Facility)</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed mb-3"><strong class="text-on-surface">O'Sullivan Communications (OSC)</strong><br>Unit 3, Hurricane Way, Apex Park<br>Slough, SL3 8AG, United Kingdom</p>
+                <p class="text-sm text-on-surface leading-relaxed">Telephone: <a class="text-primary font-semibold hover:underline" href="tel:+441753942467">+44 01753 942467</a><br>Email: <a class="text-primary font-semibold hover:underline" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a></p>
+              </div>
+            </div>
+
+                        <div style="margin-top: 0.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(195,198,214,0.45);">
+              <div class="rounded-2xl bg-surface-container-low flex items-start gap-4" style="padding: 1.75rem; border: 1px solid rgba(195,198,214,0.35);">
+                <span class="rounded-lg flex items-center justify-center shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+                <div>
+                  <span class="osc-kicker mb-1">EXISTING CLIENT PORTAL</span>
+                  <h3 class="font-headline text-lg font-semibold text-on-surface mb-1.5">OSCID &amp; <a class="text-primary hover:underline" href="emmis-menuviewer.html">EMMIS MenuViewer</a> Access</h3>
+                  <p class="text-xs text-on-surface-variant leading-relaxed" style="margin-bottom: 0;">Current airline and enterprise partners requiring credential resets or SSO onboarding for <a class="text-primary font-medium hover:underline" href="emmis-menuviewer.html">EMMIS MenuViewer</a> and OSCID can reach our operations desk directly via <a class="text-primary font-semibold hover:underline" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a>.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+    </section>
+<!-- END PART 3 OF 5 -->
+<!-- START PART 4 OF 5 -->
+    <script>
+      function scrollToForm() {
+        const formEl = document.getElementById('inquiry-form');
+        if (formEl) {
+          formEl.scrollIntoView({ behavior: 'smooth' });
+          const nameField = document.getElementById('full_name');
+          if (nameField) setTimeout(() => nameField.focus(), 600);
+        }
+      }
+
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const btn = document.getElementById('submit-btn');
+        const alertBox = document.getElementById('form-feedback-alert');
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        if (!oscCaptcha.isChecked()) {
+          oscCaptcha.showError();
+          return;
+        }
+
+        const errorBox = document.getElementById('form-error-alert');
+        const errorText = document.getElementById('form-error-text');
+        const fallbackMsg = 'Please email inquiries@oneworldonestop.com or call U.S. Operations at 973-227-5112.';
+        alertBox.classList.add('hidden');
+        errorBox.hidden = true;
+
+        btn.disabled = true;
+        btn.innerHTML = `<span class="inline-block animate-spin mr-2">⟳</span> Transmitting...`;
+        const restoreBtn = () => {
+          btn.disabled = false;
+          btn.innerHTML = `<span>Submit Program Inquiry</span>`;
+        };
+
+        const fd = new FormData(form);
+        const caps = fd.getAll('capabilities');
+        fd.delete('capabilities');
+        caps.forEach(c => fd.append('capabilities[]', c));
+
+        fetch(form.dataset.endpoint, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } })
+          .then(res => res.json().catch(() => ({ ok: false, message: '' })).then(data => ({ res, data })))
+          .then(({ res, data }) => {
+            restoreBtn();
+            if (!res.ok || !data.ok) {
+              const msg = data.message || (res.status === 404 || res.status === 405
+                ? 'The email service is not available on this demo site. ' + fallbackMsg
+                : 'Something went wrong. ' + fallbackMsg);
+              errorText.textContent = msg;
+              errorBox.hidden = false;
+              errorBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              return;
+            }
+            const refLine = document.getElementById('form-ref-line');
+            if (data.ref) { document.getElementById('form-ref').textContent = data.ref; refLine.hidden = false; } else { refLine.hidden = true; }
+            alertBox.classList.remove('hidden');
+            alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            form.reset();
+            oscCaptcha.reset();
+          })
+          .catch(() => {
+            restoreBtn();
+            errorText.textContent = 'We could not reach the email service. ' + fallbackMsg;
+            errorBox.hidden = false;
+            errorBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          });
+      }
+
+      const oscCaptcha = (function () {
+        const wrap = document.getElementById('captcha-wrap');
+        const btn = document.getElementById('captcha-check');
+        const err = document.getElementById('captcha-error');
+        let timer = null;
+        function set(state) {
+          wrap.dataset.state = state;
+          btn.setAttribute('aria-checked', state === 'checked' ? 'true' : 'false');
+        }
+        btn.addEventListener('click', function () {
+          const s = wrap.dataset.state;
+          if (s === 'loading' || s === 'checked') return;
+          err.hidden = true;
+          set('loading');
+          btn.setAttribute('aria-busy', 'true');
+          timer = setTimeout(function () { btn.removeAttribute('aria-busy'); set('checked'); }, 900);
+        });
+        return {
+          isChecked: function () { return wrap.dataset.state === 'checked'; },
+          showError: function () {
+            if (wrap.dataset.state !== 'loading') set('error');
+            err.hidden = false;
+            wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          },
+          reset: function () { clearTimeout(timer); btn.removeAttribute('aria-busy'); err.hidden = true; set('idle'); }
+        };
+      })();
+    </script>
+<!-- END PART 4 OF 5 -->
+<!-- START PART 5 OF 5 -->
+  </div>
+</main>
+
+<footer class="w-full bg-surface-container-low text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12" style="padding-top: 3rem; padding-bottom: 2.5rem;">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+      <div class="lg:col-span-4 space-y-3">
+        <a class="inline-flex items-center" href="index.html" aria-label="O'Sullivan Communications Home"><img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" style="height: 36px; width: auto;"></a>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Single-source enterprise translation, inflight menu programs, and commercial publishing—from concept to completion.</p>
+        <p class="text-xs text-on-surface-variant">Active Member: <a class="font-semibold text-primary hover:underline" href="https://alcus.org" target="_blank" rel="noopener noreferrer">ALC — Association of Language Companies</a></p>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Navigation</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-primary transition-colors" href="solutions.html">Solutions</a></li>
+          <li><a class="hover:text-primary transition-colors" href="platform.html">Our Platform</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">About OSC</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Transatlantic Operations</span>
+        <div class="text-sm space-y-2.5 leading-snug">
+          <p><strong class="text-on-surface">USA:</strong> P.O. Box 1116, Glen Rock, NJ 07452<br><a class="text-primary font-medium hover:underline" href="tel:9732275112">973-227-5112</a></p>
+          <p><strong class="text-on-surface">UK:</strong> Unit 3, Hurricane Way, Apex Park, Slough, SL3 8AG<br><a class="text-primary font-medium hover:underline" href="tel:+441753942467">+44 01753 942467</a></p>
+          <p><a class="text-primary font-medium hover:underline" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a></p>
+        </div>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Governance &amp; Access</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Client Access</a></li>
+          <li><a class="hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-primary transition-colors" href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+      <p style="margin: 0;">© 2026 O'Sullivan Communications. All rights reserved.</p>
+      <p style="margin: 0;"><strong class="font-medium text-on-surface">A Maryknoll Group Company</strong> · Established 1973 · Certified WBE</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function () {
+  var btn = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var iconOpen = document.getElementById('menu-icon-open');
+  var iconClose = document.getElementById('menu-icon-close');
+  if (!btn || !menu) return;
+  function setOpen(open) {
+    menu.setAttribute('data-open', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (iconOpen) iconOpen.classList.toggle('hidden', open);
+    if (iconClose) iconClose.classList.toggle('hidden', !open);
+  }
+  btn.addEventListener('click', function () { setOpen(menu.getAttribute('data-open') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('#site-header')) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setOpen(false); });
+})();
+</script>
+</body>
+</html>
+<!-- END PART 5 OF 5 -->
+
+
+
+

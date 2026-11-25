@@ -1,0 +1,306 @@
+<!-- START PART 1 OF 7 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Platform | Proprietary EMMIS Publishing &amp; Menu Logistics | O'Sullivan Communications (OSC)</title>
+<link rel="icon" href="assets/favicon.svg" sizes="any">
+<meta name="description" content="Explore the proprietary EMMIS ecosystem from O'Sullivan Communications (OSC): EMMIS Order Maintenance, EMMIS CMS, EMMIS MenuViewer, and EMMIS ChefChats.">
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "EMMIS Publishing & Menu Logistics Platform",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based Cloud Platform",
+  "creator": {
+    "@type": "Organization",
+    "name": "O'Sullivan Communications (OSC)",
+    "url": "https://oneworldonestop.com"
+  },
+  "description": "Enterprise publishing and global inflight menu logistics platform uniting EMMIS Order Maintenance, EMMIS CMS, EMMIS MenuViewer, and EMMIS ChefChats."
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; overflow-x: clip; }
+  body { margin: 0; overflow-x: clip; overscroll-behavior-y: none; }
+  img { max-width: 100%; }
+  ::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; }
+  main > div > :first-child { margin-top: 0 !important; }
+  #mobile-menu { transition: opacity .2s ease, transform .2s ease; }
+  #mobile-menu[data-open="false"] { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu[data-open="true"] { opacity: 1; transform: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #094cb2; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
+    <a class="flex items-center gap-3 group min-w-0" href="index.html" aria-label="O'Sullivan Communications – Home">
+      <img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" class="osc-logo w-auto shrink-0">
+    </a>
+    <nav class="osc-nav hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main">
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="solutions.html">Solutions</a>
+      <a aria-current="page" class="text-sm text-primary font-semibold transition-colors" href="platform.html">Our Platform</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About OSC</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <a class="osc-utility-btn hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-surface-container-lowest text-on-surface text-sm font-medium hover:bg-surface-container transition-colors" href="#" rel="nofollow">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Client Access
+      </a>
+      <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container transition-colors" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg id="menu-icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" data-open="false" class="lg:hidden absolute left-0 right-0 top-full bg-surface-container-lowest shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto" aria-hidden="true">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1" aria-label="Mobile">
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="solutions.html">Solutions</a>
+      <a aria-current="page" class="flex items-center justify-between px-4 py-3 rounded-lg text-base bg-surface-container text-primary font-semibold transition-colors" href="platform.html">Our Platform</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="about.html">About OSC</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="contact.html">Contact</a>
+      <a class="osc-utility-btn mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-surface-container-lowest text-on-surface text-sm font-semibold hover:bg-surface-container transition-colors" href="#" rel="nofollow">Client Access</a>
+    </nav>
+  </div>
+</header>
+<main class="w-full pt-16 sm:pt-20 bg-surface flex-1">
+  <div class="flex flex-col w-full">
+<!-- START PLATFORM HUB PART 1 OF 2 -->
+    <section class="osc-section w-full bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 gap-10 lg:gap-14 items-center" style="grid-template-columns: minmax(0, 1.35fr) minmax(300px, 1fr);">
+          <div class="flex flex-col items-start">
+            <span class="osc-kicker mb-3">THE EMMIS ECOSYSTEM · PROPRIETARY PUBLISHING &amp; LOGISTICS INTELLIGENCE</span>
+            <h1 class="osc-h1 mb-4">Our Platform: The Proprietary EMMIS Ecosystem for Inflight Menu Management and Publishing</h1>
+            <p class="text-lg font-medium text-on-surface leading-relaxed mb-4">Purpose-built by <strong class="font-semibold text-on-surface">O'Sullivan Communications (OSC)</strong>, <strong class="font-semibold text-on-surface">EMMIS</strong> unifies flight schedule analytics, structured content authoring, digital menu inspection, and galley execution into one high-reliability enterprise platform.</p>
+            <p class="text-base text-on-surface-variant leading-relaxed" style="margin-bottom: 2rem;">Where traditional operations rely on disconnected spreadsheets and manual vendor handoffs, <strong class="font-semibold text-on-surface">EMMIS</strong> integrates real-time schedule ingestion, single-source content authoring, secure digital inspection, and galley crew coordination into a unified, zero-defect workflow.</p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-primary text-on-primary font-medium text-sm hover:bg-primary-container transition-all shadow-md" href="contact.html">Request an Enterprise Demo</a>
+              <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-surface-container-lowest text-on-surface font-medium text-sm hover:bg-surface-container-high transition-colors shadow-sm" href="#emmis-modules">Explore Platform Modules</a>
+            </div>
+          </div>
+          <div>
+            <div class="p-8 rounded-2xl bg-surface-container-lowest shadow-xl">
+              <span class="osc-kicker mb-2">CONNECTED DIGITAL WORKFLOW</span>
+              <h2 class="osc-h2 mb-3">From Schedule to Service</h2>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Every seasonal menu cycle involves dozens of handoffs across airlines, catering kitchens, linguists, and print facilities. EMMIS keeps that entire workflow connected on a single enterprise platform.</p>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Raw flight schedules enter EMMIS Order Maintenance to calculate exact print volumes and press imposition rules. Reusable modular content flows through EMMIS CMS for collaborative review, automated typesetting, and translation memory synchronization—rendering simultaneously to press-ready print files, EMMIS MenuViewer digital portals, and EMMIS ChefChats galley guides.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section class="w-full bg-surface" style="padding-top: 2.25rem; padding-bottom: 2.25rem;">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="max-w-3xl mb-6">
+          <span class="osc-kicker mb-2">OPERATIONAL IMPACT</span>
+          <h2 class="osc-h2">Enterprise Outcomes and Proven Efficiencies</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-xl bg-surface-container-low shadow-sm">
+            <h3 class="font-headline text-lg font-semibold text-primary mb-2">70% Faster Cycle Rotations</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Reusable modular content architecture allows culinary teams to rotate seasonal cycles in hours rather than weeks, dramatically reducing production lead time.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-surface-container-low shadow-sm">
+            <h3 class="font-headline text-lg font-semibold text-primary mb-2">Zero Under-Catering</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Dynamic forecasting algorithms match menu production to aircraft configurations and catering load factors, preventing station shortages and costly reprints.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-surface-container-low shadow-sm">
+            <h3 class="font-headline text-lg font-semibold text-primary mb-2">Reduced Press Waste</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Automated prepress imposition combines shared food, language, and layout components across routes, maximizing press-sheet usage and reducing plate setups.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-surface-container-low shadow-sm">
+            <h3 class="font-headline text-lg font-semibold text-primary mb-2">Audit-Proof Consistency</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Direct translation memory integration ensures culinary, allergen, and brand terminology remain consistent across all routes and languages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END PLATFORM HUB PART 1 OF 2 -->
+      <!-- START PLATFORM HUB PART 2 OF 2 -->
+    <section id="emmis-modules" class="osc-section w-full bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="max-w-3xl mb-10">
+          <span class="osc-kicker mb-3">PLATFORM ARCHITECTURE</span>
+          <h2 class="osc-h2">Core Applications Within the EMMIS Ecosystem</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <div class="p-7 rounded-2xl flex items-start gap-4 h-full" style="padding: 1.75rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+
+             <span class="rounded-lg flex items-center justify-center shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+            <div class="flex flex-col flex-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-1">01 · Schedule &amp; Logistics</span>
+              <h3 class="font-headline text-xl font-semibold mb-2"><a class="text-primary hover:underline" href="emmis-order-maintenance.html">EMMIS Order Maintenance</a></h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Transform raw flight schedules into exact catering menu allocations, optimized multi-up press impositions, and automated global station shipping manifests.</p>
+            </div>
+          </div>
+          <div class="p-7 rounded-2xl flex items-start gap-4 h-full" style="padding: 1.75rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+
+             <span class="rounded-lg flex items-center justify-center shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+            <div class="flex flex-col flex-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-1">02 · Content &amp; Localization</span>
+              <h3 class="font-headline text-xl font-semibold mb-2"><a class="text-primary hover:underline" href="emmis-cms.html">EMMIS CMS</a></h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Decouple culinary and technical authoring from layout geometry—manage modular XML components, synchronize Translation Memory, and automate print and seatback IFE outputs.</p>
+            </div>
+          </div>
+          <div class="p-7 rounded-2xl flex items-start gap-4 h-full" style="padding: 1.75rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+
+             <span class="rounded-lg flex items-center justify-center shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <div class="flex flex-col flex-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-1">03 · Digital Proofing &amp; Archive</span>
+              <h3 class="font-headline text-xl font-semibold mb-2"><a class="text-primary hover:underline" href="emmis-menuviewer.html">EMMIS MenuViewer</a></h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Provide airline brand managers and catering leads with instant, SSO-protected cloud access to active and historical flying menus filtered by flight, route, or cabin class.</p>
+            </div>
+          </div>
+          <div class="p-7 rounded-2xl flex items-start gap-4 h-full" style="padding: 1.75rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+
+             <span class="rounded-lg flex items-center justify-center shrink-0" style="width: 48px; height: 48px; background: #dde3f9; color: #094cb2;"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span>
+            <div class="flex flex-col flex-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant mb-1">04 · Galley &amp; Cabin Execution</span>
+              <h3 class="font-headline text-xl font-semibold mb-2"><a class="text-primary hover:underline" href="emmis-chefchats.html">EMMIS ChefChats</a></h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Equip flight kitchens and cabin crews with visual plating photography, galley oven dwell sequences, wine-pairing guidance, allergen matrices, and caterer sign-off workflows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END PLATFORM HUB PART 2 OF 2 -->
+
+
+
+    <section class="osc-section w-full bg-surface" id="lifecycle-matrix" style="padding-bottom: 5rem;">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+       <div class="mb-8">
+          <span class="osc-kicker mb-3">SYSTEM LIFECYCLE MATRIX</span>
+          <h2 class="osc-h2 mb-3">Functional Division Across the EMMIS Platform</h2>
+          <p class="text-base text-on-surface-variant leading-relaxed">Each core application governs a dedicated stage of the publishing and catering lifecycle while sharing a single synchronized data model—eliminating manual re-keying between schedule analytics, multilingual authoring, digital proofing, and galley execution.</p>
+        </div>
+        <div class="osc-matrix-wrap rounded-xl bg-surface-container-lowest shadow-sm mb-8">
+          <table class="osc-matrix">
+            <thead><tr><th scope="col">Functional Capability</th><th scope="col">EMMIS Order Maintenance</th><th scope="col">EMMIS CMS</th><th scope="col">EMMIS MenuViewer</th><th scope="col">EMMIS ChefChats</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Flight Schedule Intelligence</th><td data-label="EMMIS Order Maintenance">Core Application</td><td data-label="EMMIS CMS">Metadata Sync</td><td data-label="EMMIS MenuViewer">Route &amp; Flight Search</td><td data-label="EMMIS ChefChats">Flight Context</td></tr>
+              <tr><th scope="row">Structured Culinary Authoring</th><td data-label="EMMIS Order Maintenance">Template &amp; Lot Rules</td><td data-label="EMMIS CMS">Core Application</td><td data-label="EMMIS MenuViewer">Read-Only View</td><td data-label="EMMIS ChefChats">Culinary Context</td></tr>
+              <tr><th scope="row">Automated Document Layout</th><td data-label="EMMIS Order Maintenance">Imposition Specifications</td><td data-label="EMMIS CMS">Core Application</td><td data-label="EMMIS MenuViewer">Rendered Digital PDF</td><td data-label="EMMIS ChefChats">Visual Plating Cards</td></tr>
+              <tr><th scope="row">Multilingual Localization</th><td data-label="EMMIS Order Maintenance">Route Language Target</td><td data-label="EMMIS CMS">Translation Pipeline</td><td data-label="EMMIS MenuViewer">Multilingual Catalog</td><td data-label="EMMIS ChefChats">Ingredient &amp; Allergen Labels</td></tr>
+              <tr><th scope="row">Catering &amp; Galley Execution</th><td data-label="EMMIS Order Maintenance">Carton &amp; Shipping Labels</td><td data-label="EMMIS CMS">Digital Asset Payload</td><td data-label="EMMIS MenuViewer">Approved Reference Archive</td><td data-label="EMMIS ChefChats">Core Application</td></tr>
+            </tbody>
+          </table>
+        </div>
+       <div class="rounded-2xl bg-surface-container-low" style="padding: 2rem; border-left: 4px solid #094cb2;">
+
+          <h3 class="font-headline text-lg font-semibold text-on-surface mb-2">Structured XML Architecture Without the Complexity</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Behind EMMIS's intuitive browser interface sits a modular XML component engine that separates culinary and technical content from layout geometry. When a single dish description, wine note, or regulatory allergen warning updates, server-side composition automatically re-typesets every affected route, cabin class, and language variant across physical print signatures and seatback IFE feeds.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="osc-section osc-on-dark w-full bg-on-surface text-surface relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center relative z-10">
+        <span class="osc-kicker mb-4">PLATFORM CAPABILITIES &amp; WORKFLOW</span>
+        <h2 class="osc-h2 mb-4">Schedule an Operational Demonstration of the EMMIS Platform</h2>
+        <p class="text-base text-surface/80 leading-relaxed mb-8 max-w-2xl">Request a guided architecture walkthrough with our systems engineering team to inspect live schedule ingestion, modular content authoring, and cloud inspection workflows.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-surface-container-lowest text-on-surface font-semibold text-sm hover:bg-surface-dim transition-all shadow-xl group" href="contact.html">Request an Enterprise Demo
+          </a>
+          <a class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded bg-surface/10 text-surface font-semibold text-sm transition-colors" href="tel:9732275112">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call U.S. Operations: 973-227-5112
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="w-full bg-surface-container-low text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12" style="padding-top: 3rem; padding-bottom: 2.5rem;">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+      <div class="lg:col-span-4 space-y-3">
+        <a class="inline-flex items-center" href="index.html" aria-label="O'Sullivan Communications Home"><img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" style="height: 36px; width: auto;"></a>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Single-source enterprise translation, inflight menu programs, and commercial publishing—from concept to completion.</p>
+        <p class="text-xs text-on-surface-variant">Active Member: <a class="font-semibold text-primary hover:underline" href="https://alcus.org" target="_blank" rel="noopener noreferrer">ALC — Association of Language Companies</a></p>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Navigation</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-primary transition-colors" href="solutions.html">Solutions</a></li>
+          <li><a class="hover:text-primary transition-colors" href="platform.html">Our Platform</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">About OSC</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Transatlantic Operations</span>
+        <div class="text-sm space-y-2.5 leading-snug">
+          <p><strong class="text-on-surface">USA:</strong> P.O. Box 1116, Glen Rock, NJ 07452<br><a class="text-primary font-medium hover:underline" href="tel:9732275112">973-227-5112</a></p>
+          <p><strong class="text-on-surface">UK:</strong> Unit 3, Hurricane Way, Apex Park, Slough, SL3 8AG<br><a class="text-primary font-medium hover:underline" href="tel:+441753942467">+44 01753 942467</a></p>
+          <p><a class="text-primary font-medium hover:underline" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a></p>
+        </div>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Governance &amp; Access</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Client Access</a></li>
+          <li><a class="hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-primary transition-colors" href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+      <p style="margin: 0;">© 2026 O'Sullivan Communications. All rights reserved.</p>
+      <p style="margin: 0;"><strong class="font-medium text-on-surface">A Maryknoll Group Company</strong> · Established 1973 · Certified WBE</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var iconOpen = document.getElementById('menu-icon-open');
+  var iconClose = document.getElementById('menu-icon-close');
+  if (!btn || !menu) return;
+  function setOpen(open) {
+    menu.setAttribute('data-open', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (iconOpen) iconOpen.classList.toggle('hidden', open);
+    if (iconClose) iconClose.classList.toggle('hidden', !open);
+  }
+  btn.addEventListener('click', function () { setOpen(menu.getAttribute('data-open') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('#site-header')) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setOpen(false); });
+})();
+</script>
+</body>
+</html>
+<!-- END PART 7 OF 7 -->
+
+
+
+
+
+
+

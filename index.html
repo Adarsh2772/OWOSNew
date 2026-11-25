@@ -1,0 +1,309 @@
+<!-- START PART 1 OF 3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O'Sullivan Communications (OSC) | Single-Source Inflight Menus &amp; Multilingual Publishing</title>
+<link rel="icon" href="assets/favicon.svg" sizes="any">
+<meta name="description" content="For over 50 years, O'Sullivan Communications (OSC) has delivered departure-critical inflight menu programs and enterprise multilingual publishing, built on proprietary EMMIS technology.">
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "O'Sullivan Communications (OSC)",
+  "url": "https://oneworldonestop.com",
+  "foundingDate": "1973",
+  "parentOrganization": { "@type": "Organization", "name": "The Maryknoll Group" },
+  "department": [
+    {
+      "@type": "LocalBusiness",
+      "name": "O'Sullivan Communications - U.S. Operations",
+      "telephone": "+1-973-227-5112",
+      "address": { "@type": "PostalAddress", "postOfficeBoxNumber": "P.O. Box 1116", "addressLocality": "Glen Rock", "addressRegion": "NJ", "postalCode": "07452", "addressCountry": "US" }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "O'Sullivan Communications - U.K. Operations",
+      "telephone": "+44-01753-942467",
+      "address": { "@type": "PostalAddress", "streetAddress": "Unit 3, Hurricane Way, Apex Park", "addressLocality": "Slough", "postalCode": "SL3 8AG", "addressCountry": "GB" }
+    }
+  ]
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; overflow-x: clip; }
+  body { margin: 0; overflow-x: clip; overscroll-behavior-y: none; }
+  img { max-width: 100%; }
+  ::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; }
+  main > div > :first-child { margin-top: 0 !important; }
+  #mobile-menu { transition: opacity .2s ease, transform .2s ease; }
+  #mobile-menu[data-open="false"] { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+  #mobile-menu[data-open="true"] { opacity: 1; transform: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #094cb2; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4 lg:gap-8">
+    <a class="flex items-center gap-3 group min-w-0" href="index.html" aria-label="O'Sullivan Communications – Home">
+      <img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" class="osc-logo w-auto shrink-0">
+    </a>
+    <nav class="osc-nav hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main">
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="solutions.html">Solutions</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="platform.html">Our Platform</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About OSC</a>
+      <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+      <a class="osc-utility-btn hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded bg-surface-container-lowest text-on-surface text-sm font-medium hover:bg-surface-container transition-colors" href="#" rel="nofollow">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Client Access
+      </a>
+      <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-on-surface hover:bg-surface-container transition-colors" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg id="menu-icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" data-open="false" class="lg:hidden absolute left-0 right-0 top-full bg-surface-container-lowest shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto" aria-hidden="true">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1" aria-label="Mobile">
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="solutions.html">Solutions</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="platform.html">Our Platform</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="about.html">About OSC</a>
+      <a class="flex items-center justify-between px-4 py-3 rounded-lg text-base text-on-surface hover:bg-surface-container-low transition-colors" href="contact.html">Contact</a>
+      <a class="osc-utility-btn mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-surface-container-lowest text-on-surface text-sm font-semibold hover:bg-surface-container transition-colors" href="#" rel="nofollow">Client Access</a>
+    </nav>
+  </div>
+</header>
+<main class="w-full pt-16 sm:pt-20 bg-surface flex-1">
+  <div class="flex flex-col w-full">
+<!-- END PART 1 OF 3 -->
+<!-- START PART 2 OF 3 -->
+<!-- START INDEX POLISHED PART 1 OF 2 -->
+    <section class="osc-section w-full bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 gap-10 lg:gap-14 items-center" style="grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);">
+          <div class="flex flex-col items-start">
+            <span class="osc-kicker mb-3">O'SULLIVAN COMMUNICATIONS · ACCELERATING GLOBAL DELIVERY</span>
+            <h1 class="osc-h1 mb-4">Single-Source Inflight Menu Programs, Enterprise Translation, and Commercial Publishing</h1>
+            <p class="text-lg font-medium text-on-surface leading-relaxed mb-4">From Culinary Creation and Technical Translation to Direct Cabin Delivery Across Six Continents</p>
+            <p class="text-base text-on-surface-variant leading-relaxed" style="margin-bottom: 2rem;">For over 50 years, <strong class="font-semibold text-on-surface">O'Sullivan Communications (OSC)</strong> has delivered a true <em class="italic text-on-surface font-medium">One World, One Stop</em> publishing model—eliminating the delays and handoff errors of managing separate creative, translation, and print vendors. Built on our proprietary <strong class="font-semibold text-on-surface">EMMIS</strong> technology, we deliver departure-critical inflight menus and enterprise multilingual publishing with zero-defect accountability.</p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-primary text-on-primary font-medium text-sm hover:bg-primary-container transition-all shadow-md" href="solutions.html">Explore Solutions</a>
+              <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-surface-container-lowest text-on-surface font-medium text-sm hover:bg-surface-container-high transition-colors shadow-sm" href="platform.html">Discover Our Platform</a>
+            </div>
+          </div>
+          <div>
+            <div class="rounded-2xl shadow-lg" style="padding: 1.75rem; background: #ffffff; border-top: 4px solid #7c5800;">
+              <span class="osc-kicker mb-4">ESTABLISHED 1973 · A MARYKNOLL GROUP COMPANY</span>
+              <div class="grid grid-cols-2 gap-5 pb-5 mb-4" style="border-bottom: 1px solid rgba(195,198,214,0.4);">
+                <div>
+                  <span class="font-headline text-2xl font-semibold text-primary block">50+ Years</span>
+                  <span class="text-xs text-on-surface-variant leading-snug block mt-1">Award-winning operational excellence</span>
+                </div>
+                <div>
+                  <span class="font-headline text-2xl font-semibold text-primary block">65M+</span>
+                  <span class="text-xs text-on-surface-variant leading-snug block mt-1">Inflight menus delivered annually</span>
+                </div>
+                <div>
+                  <span class="font-headline text-2xl font-semibold text-primary block">75+</span>
+                  <span class="text-xs text-on-surface-variant leading-snug block mt-1">Language variants &amp; regional dialects</span>
+                </div>
+                <div>
+                  <span class="font-headline text-2xl font-semibold text-primary block">Zero</span>
+                  <span class="text-xs text-on-surface-variant leading-snug block mt-1">Departure delays across global hubs</span>
+                </div>
+              </div>
+              <p class="text-xs text-on-surface-variant leading-relaxed" style="margin-bottom: 0;"><strong class="font-semibold text-on-surface">Certified WBE</strong> · Synchronized <strong class="font-semibold text-on-surface">U.S. &amp; U.K.</strong> Production &amp; Fulfillment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="osc-section w-full bg-surface">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div>
+            <span class="osc-kicker mb-2">INSTITUTIONAL PEDIGREE</span>
+            <h2 class="osc-h2 mb-3">Award-Winning Heritage &amp; Dual-Continent Scale</h2>
+            <p class="text-base text-on-surface-variant leading-relaxed">Founded in 1973, <a class="text-primary font-medium hover:underline" href="about.html">O'Sullivan Communications (OSC)</a> designs, manages, translates, prints, and distributes over 65 million inflight menus annually from coordinated U.S. and U.K. facilities—serving premier international airlines alongside Fortune 500 leaders across consumer products, electronics, and pharmaceuticals.</p>
+          </div>
+          <div>
+            <span class="osc-kicker mb-2">SINGLE-SOURCE ACCOUNTABILITY</span>
+            <h2 class="osc-h2 mb-3">Translation and Print Production Under One Roof</h2>
+            <p class="text-base text-on-surface-variant leading-relaxed">Dividing editorial localization, desktop typesetting, and commercial printing across disconnected vendors introduces version drift and costly delays. OSC integrates native linguists, creative designers, proprietary <a class="text-primary font-medium hover:underline" href="platform.html">EMMIS automation</a>, prepress engineering, and global fulfillment under <strong class="font-semibold text-on-surface">single-point accountability</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END INDEX POLISHED PART 1 OF 2 -->
+ <!-- START INDEX POLISHED PART 2 OF 2 -->
+    <section class="osc-section w-full bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="mb-8">
+          <span class="osc-kicker mb-3">ENTERPRISE SOLUTIONS</span>
+          <h2 class="osc-h2">Built for High-Stakes Publishing Across Global Industries</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 items-stretch">
+          <div class="rounded-2xl shadow-sm h-full flex items-start gap-4" style="padding: 1.75rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35);">
+            <span class="rounded-lg flex items-center justify-center shrink-0 mt-0.5" style="width: 36px; height: 36px; background: #dde3f9; color: #094cb2;"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span>
+            <div>
+              <h3 class="font-headline text-xl font-semibold mb-2.5"><a class="text-primary hover:underline" href="solutions.html#inflight-menu-management">Inflight Menu Management &amp; Crew Reference Documentation</a></h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed" style="margin-bottom: 0;">Turnkey lifecycle management—or flexible <em>à la carte</em> logistics and production—for printed cabin menus, airline wine guides, Flight Attendant Reference Sheets, <a class="text-primary font-medium hover:underline" href="emmis-chefchats.html">EMMIS ChefChats</a> galley guides, and synchronized seatback IFE digital feeds.</p>
+            </div>
+          </div>
+          <div class="rounded-2xl shadow-sm h-full flex items-start gap-4" style="padding: 1.75rem; background: #ffffff; border: 1px solid rgba(195,198,214,0.35);">
+            <span class="rounded-lg flex items-center justify-center shrink-0 mt-0.5" style="width: 36px; height: 36px; background: #dde3f9; color: #094cb2;"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
+            <div>
+              <h3 class="font-headline text-xl font-semibold mb-2.5"><a class="text-primary hover:underline" href="solutions.html#enterprise-translation">Enterprise Translation, Technical Manuals &amp; Commercial Publishing</a></h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed" style="margin-bottom: 0;">Multilingual localization, centralized translation memory, native editorial proofing, and desktop publishing across 75+ language variants for complex technical manuals, regulatory filings, and <a class="text-primary font-medium hover:underline" href="solutions.html#commercial-publishing">dual-continent commercial print production</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl shadow-md flex items-start gap-4" style="padding: 2rem; background: #ffffff; border-left: 4px solid #094cb2;">
+          <span class="rounded-lg flex items-center justify-center shrink-0 mt-0.5" style="width: 36px; height: 36px; background: #dde3f9; color: #094cb2;"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <div>
+            <span class="osc-kicker mb-1.5">PROPRIETARY TECHNOLOGY</span>
+            <h2 class="osc-h2 mb-2.5"><a class="text-primary hover:underline" href="platform.html">The Proprietary EMMIS Publishing &amp; Logistics Platform</a></h2>
+            <p class="text-base text-on-surface-variant leading-relaxed" style="margin-bottom: 0;">Uniting <a class="text-primary font-medium hover:underline" href="emmis-order-maintenance.html">EMMIS Order Maintenance</a>, <a class="text-primary font-medium hover:underline" href="emmis-cms.html">EMMIS CMS</a>, <a class="text-primary font-medium hover:underline" href="emmis-menuviewer.html">EMMIS MenuViewer</a>, and <a class="text-primary font-medium hover:underline" href="emmis-chefchats.html">EMMIS ChefChats</a> in one digital ecosystem to ingest flight schedules, automate modular composition, enable cloud menu inspection, and deliver verified plating guides to flight kitchens and cabin crews.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="osc-section w-full bg-surface">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <div class="rounded-2xl bg-surface-container-low shadow-sm h-full flex flex-col justify-between" style="padding: 2rem; border: 1px solid rgba(195,198,214,0.35);">
+            <div>
+              <span class="osc-kicker mb-2">GLOBAL OPERATIONS &amp; CREDENTIALS</span>
+              <h2 class="osc-h2 mb-3">Transatlantic Production and Professional Accreditations</h2>
+              <p class="text-base text-on-surface-variant leading-relaxed mb-6">With established operational hubs in Glen Rock, New Jersey and Slough, Berkshire (United Kingdom), OSC delivers responsive, multi-continent support for global route networks and international brand rollouts.</p>
+            </div>
+            <div class="pt-5 flex flex-wrap items-center gap-4" style="border-top: 1px solid rgba(195,198,214,0.4);">
+              <a class="shrink-0" href="https://alcus.org" target="_blank" rel="noopener noreferrer">
+                <img src="assets/alc-logo.png" alt="ALC — Association of Language Companies" width="1414" height="652" style="max-width: 100px; height: auto;">
+              </a>
+              <div class="text-xs leading-snug">
+                <span class="block font-semibold uppercase tracking-wider text-on-surface">Industry Accreditation</span>
+                <a class="font-semibold text-primary hover:underline" href="https://alcus.org" target="_blank" rel="noopener noreferrer">ALC — Association of Language Companies (Active Member)</a>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-2xl bg-surface-container-low shadow-sm h-full flex flex-col justify-between" style="padding: 2rem; border: 1px solid rgba(195,198,214,0.35);">
+            <div>
+              <span class="osc-kicker mb-2">AVIATION &amp; GLOBAL PARTNERS</span>
+              <h3 class="font-headline text-xl font-semibold text-on-surface mb-3">Trusted by Premier International Airlines</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Selected international carriers relying on <a class="text-primary font-medium hover:underline" href="about.html">O'Sullivan Communications</a> for departure-critical dining programs, multilingual passenger collateral, and global station logistics:</p>
+            </div>
+            <div class="flex flex-wrap gap-2.5 text-sm font-medium text-on-surface">
+              <span class="px-4 py-2 rounded-lg" style="background: #ffffff; border: 1px solid rgba(195,198,214,0.4);">Air Canada</span>
+              <span class="px-4 py-2 rounded-lg" style="background: #ffffff; border: 1px solid rgba(195,198,214,0.4);">United Airlines</span>
+              <span class="px-4 py-2 rounded-lg" style="background: #ffffff; border: 1px solid rgba(195,198,214,0.4);">British Airways</span>
+              <span class="px-4 py-2 rounded-lg" style="background: #ffffff; border: 1px solid rgba(195,198,214,0.4);">WestJet</span>
+              <span class="px-4 py-2 rounded-lg" style="background: #ffffff; border: 1px solid rgba(195,198,214,0.4);">Virgin Atlantic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- END INDEX POLISHED PART 2 OF 2 -->
+
+
+
+ <section class="osc-section osc-on-dark w-full bg-on-surface text-surface relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center relative z-10">
+        <span class="osc-kicker mb-4">PROJECT PLANNING &amp; LOGISTICS</span>
+        <h2 class="osc-h2 mb-4">Evaluate Your Program Requirements with Our Operations Specialists</h2>
+        <p class="text-base text-surface/80 leading-relaxed mb-8 max-w-2xl">Connect with our project management teams to review your production schedule, language scope, or custom workflow requirements.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a class="inline-flex items-center justify-center px-8 py-3.5 rounded bg-surface-container-lowest text-on-surface font-semibold text-sm hover:bg-surface-dim transition-all shadow-xl group" href="contact.html">Discuss Your Project
+
+          </a>
+          <a class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded bg-surface/10 text-surface font-semibold text-sm transition-colors" href="tel:9732275112">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call U.S. Operations: 973-227-5112
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="w-full bg-surface-container-low text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12" style="padding-top: 3rem; padding-bottom: 2.5rem;">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+      <div class="lg:col-span-4 space-y-3">
+        <a class="inline-flex items-center" href="index.html" aria-label="O'Sullivan Communications Home"><img src="assets/OSC_4C_Large.svg" alt="O'Sullivan Communications (OSC)" width="286" height="98" style="height: 36px; width: auto;"></a>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Single-source enterprise translation, inflight menu programs, and commercial publishing—from concept to completion.</p>
+        <p class="text-xs text-on-surface-variant">Active Member: <a class="font-semibold text-primary hover:underline" href="https://alcus.org" target="_blank" rel="noopener noreferrer">ALC — Association of Language Companies</a></p>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Navigation</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-primary transition-colors" href="solutions.html">Solutions</a></li>
+          <li><a class="hover:text-primary transition-colors" href="platform.html">Our Platform</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">About OSC</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Transatlantic Operations</span>
+        <div class="text-sm space-y-2.5 leading-snug">
+          <p><strong class="text-on-surface">USA:</strong> P.O. Box 1116, Glen Rock, NJ 07452<br><a class="text-primary font-medium hover:underline" href="tel:9732275112">973-227-5112</a></p>
+          <p><strong class="text-on-surface">UK:</strong> Unit 3, Hurricane Way, Apex Park, Slough, SL3 8AG<br><a class="text-primary font-medium hover:underline" href="tel:+441753942467">+44 01753 942467</a></p>
+          <p><a class="text-primary font-medium hover:underline" href="mailto:inquiries@oneworldonestop.com">inquiries@oneworldonestop.com</a></p>
+        </div>
+      </div>
+      <div class="lg:col-span-2 space-y-2.5">
+        <span class="block text-xs font-semibold uppercase tracking-wider text-on-surface">Governance &amp; Access</span>
+        <ul class="space-y-1.5 text-sm" style="list-style: none; padding-left: 0; margin: 0;">
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Client Access</a></li>
+          <li><a class="hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-primary transition-colors" href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-on-surface-variant" style="border-top: 1px solid rgba(195,198,214,0.35);">
+      <p style="margin: 0;">© 2026 O'Sullivan Communications. All rights reserved.</p>
+      <p style="margin: 0;"><strong class="font-medium text-on-surface">A Maryknoll Group Company</strong> · Established 1973 · Certified WBE</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var iconOpen = document.getElementById('menu-icon-open');
+  var iconClose = document.getElementById('menu-icon-close');
+  if (!btn || !menu) return;
+  function setOpen(open) {
+    menu.setAttribute('data-open', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (iconOpen) iconOpen.classList.toggle('hidden', open);
+    if (iconClose) iconClose.classList.toggle('hidden', !open);
+  }
+  btn.addEventListener('click', function () { setOpen(menu.getAttribute('data-open') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('#site-header')) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1024) setOpen(false); });
+})();
+</script>
+</body>
+</html>
+
+
