@@ -96,3 +96,19 @@ main section:not(.osc-on-dark) p.text-lg {
 main > div > section:first-child h1.osc-h1 {
   margin-bottom: 1.15rem;
 }
+
+/* Mobile layout guardrails (Solutions / Platform / hero sections) */
+@media (max-width:1023px){
+  /* Stacked equal-weight cards grow with their text instead of keeping desktop stretch heights */
+  .osc-tri>div{height:auto}
+}
+@media (max-width:767px){
+  /* Hero grids set their desktop columns inline; collapse to one column on phones */
+  .osc-hero-grid{grid-template-columns:minmax(0,1fr)!important}
+  /* Card grids: no fixed/stretched heights so long text never clips */
+  .osc-card-grid>div{height:auto}
+  /* EMMIS module cards: icon above text so copy gets the full card width */
+  .osc-module-grid>div{flex-direction:column;gap:.875rem}
+  /* Solutions detail columns: drop the desktop rail so cards use the full width */
+  .osc-detail-col{border-left:0!important;padding-left:0!important}
+}
